@@ -25,7 +25,7 @@ Estoque | Redis | Key-Value | Totalização de valor
 
 ## Versões da Aplicação de Exemplo
 
-Para fins de comparação temos duas versões de implementação do projeto. Um versão é flexível e permite rodar testes em paralelo, outra é rígida e os testes devem ser executados um por vez.
+Para fins de comparação temos duas versões de implementação do projeto. Uma versão é flexível e permite rodar testes em paralelo, outra é rígida e os testes devem ser executados um por vez.
 
  - [Versão concorrente](./testes-integracao-concorrente)
  - [Versão não concorrente](./testes-integracao-nao-concorrente)
