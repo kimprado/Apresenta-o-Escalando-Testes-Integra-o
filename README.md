@@ -1,4 +1,4 @@
-# Códigos de exemplo da apresentação Escalando Testes de Integração da Aplicação com Docker
+# Apresentação Escalando Testes de Integração da Aplicação com Docker
 
 Código fonte dos projetos de exemplo usados na apresentação.
 
