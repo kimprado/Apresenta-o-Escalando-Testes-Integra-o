@@ -1,0 +1,29 @@
+{
+    "environment": {
+        "name": "test-integration"
+    },
+    "server": {
+        "port": "4000"
+    },
+    "redisdb": {
+        "host": "localhost",
+        "port": 6380
+    },
+    "StoneAcquirer": {
+        "URL": "http://localhost:8092/stone",
+        "ConcurrentWorkers": 10
+    },
+    "CieloAcquirer": {
+        "URL": "http://localhost:8092/cielo",
+        "ConcurrentWorkers": 10
+    },
+    "Security": {
+        "JWTKey": "challenge"
+    },
+    "logging": {
+        "level": {
+            "ROOT": "INFO",
+            "infra": "INFO"
+        }
+    }
+}
