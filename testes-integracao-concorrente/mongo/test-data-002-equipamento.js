@@ -6,6 +6,7 @@ let testes = [
     '',
     'TestConectarDB',
     'TestConsultarMartelo',
+    'TestConsultarAtivos',
 ];
 
 let hoje = new Date();

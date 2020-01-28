@@ -6,6 +6,7 @@ let testes = [
   '',
   'TestConectarDB',
   'TestConsultarMartelo',
+  'TestConsultarAtivos',
 ];
 
 testes.forEach(teste => {
