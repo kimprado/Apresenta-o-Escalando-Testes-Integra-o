@@ -30,7 +30,7 @@ test-unit-container:
 	@docker-compose up --build test-unit
 
 ## test-integration-container	: Executa testes de integração em ambiente containerizado.
-test-integration-container:
+test-integration-container: infra-test-stop infra-test-start
 	@docker-compose up --build test-integration
 
 ## test-all-container		: Executa testes de unidade e integração em ambiente containerizado.
