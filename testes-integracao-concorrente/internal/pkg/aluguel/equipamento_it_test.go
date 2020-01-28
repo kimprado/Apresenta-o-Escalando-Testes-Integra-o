@@ -36,4 +36,7 @@ func TestConsultarMartelo(t *testing.T) {
 	assert.Nil(t, err)
 	assert.NotNil(t, v)
 
+	assert.Equal(t, "Martelo", v.Descricao)
+	assert.Equal(t, "e-001", v.Codigo)
+
 }
