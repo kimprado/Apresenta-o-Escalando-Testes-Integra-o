@@ -5,6 +5,7 @@ nomeDB = 'aluguel'
 let testes = [
   '',
   'TestConectarDB',
+  'TestConsultarMartelo',
 ];
 
 testes.forEach(teste => {

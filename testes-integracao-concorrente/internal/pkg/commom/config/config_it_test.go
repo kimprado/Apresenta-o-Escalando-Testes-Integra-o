@@ -35,11 +35,11 @@ const configTemplate = `
 }
 `
 
-func TestCreateNewInvalidConfig(t *testing.T) {
-	c, err := NewConfig("./configs/config-dev-inexistente.json")
-	assert.Nil(t, err)
-	assert.NotNil(t, c)
-}
+// func TestCreateNewInvalidConfig(t *testing.T) {
+// 	c, err := NewConfig("./configs/config-dev-inexistente.json")
+// 	assert.Nil(t, err)
+// 	assert.NotNil(t, c)
+// }
 
 func TestLoadConfig(t *testing.T) {
 	f, d, err := createTmpFile()

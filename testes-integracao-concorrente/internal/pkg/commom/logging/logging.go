@@ -20,6 +20,11 @@ type LoggerRedisDB struct {
 	l.Logger
 }
 
+//LoggerEquipamentoRepository para logar equipamento.repository
+type LoggerEquipamentoRepository struct {
+	l.Logger
+}
+
 // LoggerWebServer para logar webserver
 type LoggerWebServer struct {
 	l.Logger
@@ -40,6 +45,12 @@ func NewMongo(configLevels config.LoggingLevels) (log LoggerMongo) {
 // NewRedisDB cria Logger "infra.redis.db"
 func NewRedisDB(configLevels config.LoggingLevels) (log LoggerRedisDB) {
 	log = LoggerRedisDB{l.NewLogger("infra.redis.db", configLevels)}
+	return
+}
+
+//NewEquipamentoRepository cria Logger "equipamento.repository"
+func NewEquipamentoRepository(configLevels config.LoggingLevels) (log LoggerEquipamentoRepository) {
+	log = LoggerEquipamentoRepository{l.NewLogger("equipamento.repository", configLevels)}
 	return
 }
 

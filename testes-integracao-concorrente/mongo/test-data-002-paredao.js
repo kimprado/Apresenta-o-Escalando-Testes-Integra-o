@@ -5,6 +5,7 @@ let nomeDB = 'aluguel'
 let testes = [
     '',
     'TestConectarDB',
+    'TestConsultarMartelo',
 ];
 
 let hoje = new Date();
