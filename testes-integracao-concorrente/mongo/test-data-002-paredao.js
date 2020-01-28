@@ -38,10 +38,10 @@ testes.forEach(teste => {
     };
 
     let res = [
-        db.Aluguel.drop(),
-        db.Aluguel.insert(Martelo),
-        db.Aluguel.insert(Furadeira),
-        db.Aluguel.createIndex({ ativo: 1 }),
+        db.Equipamento.drop(),
+        db.Equipamento.insert(Martelo),
+        db.Equipamento.insert(Furadeira),
+        db.Equipamento.createIndex({ ativo: 1 }),
     ];
 
     printjson(res)
