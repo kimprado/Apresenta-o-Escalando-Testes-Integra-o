@@ -27,6 +27,7 @@ services:
       - ./configs/config-integration-container.json:/src/configs/config-integration.json
     depends_on:
       - redis-test
+      - mongo-test
   test-all:
     build: .
     command: make test-all
@@ -35,3 +36,4 @@ services:
       - ./configs/config-integration-container.json:/src/configs/config-integration.json
     depends_on:
       - redis-test
+      - mongo-test
