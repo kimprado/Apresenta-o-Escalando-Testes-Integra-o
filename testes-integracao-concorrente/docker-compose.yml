@@ -1,5 +1,14 @@
 version: '3.3'
 services:
+  mongo-test:
+    image: mongo:4.0.9
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+    volumes:
+      - ${PWD}/mongo/:/docker-entrypoint-initdb.d/
+    ports: 
+      - 27018:27017
   redis-test:
     image: redis:4.0.11-alpine3.8 
     command: redis-server

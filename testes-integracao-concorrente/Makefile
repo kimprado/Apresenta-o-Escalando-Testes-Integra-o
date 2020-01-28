@@ -39,8 +39,8 @@ test-all-container:
 
 ## infra-test-start		: Inicia serviços de dependência de testes containerizados.
 infra-test-start:
-	@docker-compose up -d --build redis-test
+	@docker-compose up -d --build mongo-test redis-test
 
 ## infra-test-stop		: Interrompe containers de testes.
 infra-test-stop:
-	@docker-compose rm -fsv test-unit test-integration test-all redis-test
+	@docker-compose rm -fsv test-unit test-integration test-all redis-test mongo-test 

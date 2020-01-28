@@ -5,20 +5,18 @@
     "server": {
         "port": "4000"
     },
+    "mongodb": {
+        "cluster": false,
+        "host": "mongo-test",
+        "port": 27017,
+        "database": "aluguel",
+        "user": "aluguel",
+        "password": "aluguel",
+        "timeout": 180
+    },
     "redisdb": {
         "host": "redis-test",
         "port": 6379
-    },
-    "StoneAcquirer": {
-        "URL": "http://acquirers:8092/stone",
-        "ConcurrentWorkers": 10
-    },
-    "CieloAcquirer": {
-        "URL": "http://acquirers:8092/cielo",
-        "ConcurrentWorkers": 10
-    },
-    "Security": {
-        "JWTKey": "challenge"
     },
     "logging": {
         "level": {

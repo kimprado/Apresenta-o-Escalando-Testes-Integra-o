@@ -10,6 +10,11 @@ type Logger struct {
 	l.Logger
 }
 
+//LoggerMongo para logar infra.database.mongo
+type LoggerMongo struct {
+	l.Logger
+}
+
 // LoggerRedisDB para logar infra.redis.db
 type LoggerRedisDB struct {
 	l.Logger
@@ -23,6 +28,12 @@ type LoggerWebServer struct {
 // NewLogger cria Logger ""(ROOT)
 func NewLogger(configLevels config.LoggingLevels) (log Logger) {
 	log = Logger{l.NewLogger("", configLevels)}
+	return
+}
+
+//NewMongo cria Logger "infra.database.mongo"
+func NewMongo(configLevels config.LoggingLevels) (log LoggerMongo) {
+	log = LoggerMongo{l.NewLogger("infra.database.mongo", configLevels)}
 	return
 }
 

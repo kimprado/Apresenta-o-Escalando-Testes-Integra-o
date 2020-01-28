@@ -2,6 +2,7 @@ package config
 
 import (
 	"flag"
+	"time"
 
 	"github.com/jinzhu/configor"
 )
@@ -18,6 +19,16 @@ type Configuration struct {
 
 	Server struct {
 		Port string `default:"8081"`
+	}
+
+	MongoDB struct {
+		Cluster  bool          `default:"false"`
+		Host     string        `default:"localhost"`
+		Port     int           `default:"27017"`
+		Database string        `required:"true"`
+		User     string        `required:"false"`
+		Password string        `required:"false"`
+		Timeout  time.Duration `default:"60"`
 	}
 
 	RedisDB RedisDB
