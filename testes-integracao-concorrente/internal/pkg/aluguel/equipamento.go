@@ -15,7 +15,7 @@ type Equipamento struct {
 	ID        bson.ObjectId `bson:"_id"`
 	Codigo    string        `bson:"codigo"`
 	Descricao string        `bson:"descricao"`
-	RPM       string        `bson:"descricao"`
+	RPM       string        `bson:"rpm"`
 	criacao   time.Time     `bson:"criacao"`
 	Ativo     bool          `bson:"ativo"`
 }
