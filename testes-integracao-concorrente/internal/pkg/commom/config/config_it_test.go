@@ -22,6 +22,15 @@ const configTemplate = `
 	},
     "server": {
         "port": "3080"
+	},
+	"mongodb": {
+        "cluster": false,
+        "host": "localhost",
+        "port": 27018,
+        "database": "aluguel",
+        "user": "aluguel",
+        "password": "aluguel",
+        "timeout": 30
     },
     "redisDB": {
         "host": "host-IT-test",
@@ -35,11 +44,10 @@ const configTemplate = `
 }
 `
 
-// func TestCreateNewInvalidConfig(t *testing.T) {
-// 	c, err := NewConfig("./configs/config-dev-inexistente.json")
-// 	assert.Nil(t, err)
-// 	assert.NotNil(t, c)
-// }
+func TestCreateNewInvalidConfig(t *testing.T) {
+	_, err := NewConfig("./configs/config-dev-inexistente.json")
+	assert.NotNil(t, err)
+}
 
 func TestLoadConfig(t *testing.T) {
 	f, d, err := createTmpFile()
