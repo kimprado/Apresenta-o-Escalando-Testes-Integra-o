@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+  redis-test:
+    image: redis:4.0.11-alpine3.8 
+    command: redis-server
+    ports: 
+      - 6380:6379
+  test-unit:
+    build: .
+    command: make test-unit
+    volumes:
+      - .:/src
+  test-integration:
+    build: .
+    command: make test-integration
+    volumes:
+      - .:/src
+      - ./configs/config-integration-container.json:/src/configs/config-integration.json
+    depends_on:
+      - redis-test
+  test-all:
+    build: .
+    command: make test-all
+    volumes:
+      - .:/src
+      - ./configs/config-integration-container.json:/src/configs/config-integration.json
+    depends_on:
+      - redis-test

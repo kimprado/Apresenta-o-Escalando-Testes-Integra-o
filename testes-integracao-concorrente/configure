@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+if  [ ! -e "./.vscode/settings.json" ]; then
+    cp "./.vscode/settings-sample.json" "./.vscode/settings.json"
+fi
+
+if  [ ! -e "./.vscode/launch.json" ]; then
+    cp "./.vscode/launch-sample.json" "./.vscode/launch.json"
+fi
+
+OS_DEBIAN="/etc/debian_version"
+
+if [ -e "$OS_DEBIAN" ]; then
+    sudo apt-get -y install \
+                    curl \
+                    git gitk git-gui \
+                    make 
+fi
+
+go get github.com/google/wire/cmd/wire@v0.4.0
